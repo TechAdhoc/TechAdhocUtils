@@ -1,0 +1,3 @@
+include ':techAdhocUtils'
+include ':app'
+rootProject.name = "TechAdhocUtils"
