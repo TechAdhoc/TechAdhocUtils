@@ -4,11 +4,10 @@ package com.techadhoc.techadhocutils.features.utils;
 class TaskCallback implements Runnable {
 
     private final Runnable task;
-
     private final TaskThreadCallback callback;
     private final GenericObject genericObject;
 
-    TaskCallback(Runnable task, TaskThreadCallback callback, GenericObject test ) {
+    TaskCallback(Runnable task, TaskThreadCallback callback, GenericObject test) {
         this.task = task;
         this.callback = callback;
         this.genericObject = test;
@@ -18,10 +17,9 @@ class TaskCallback implements Runnable {
         task.run();
         callback.onComplete(genericObject);
     }
-
 }
- class GenericObject<T> {
 
+class GenericObject<T> {
     private T t;
 
     public T get() {

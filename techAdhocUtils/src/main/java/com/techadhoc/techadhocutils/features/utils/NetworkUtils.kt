@@ -2,13 +2,14 @@ package com.techadhoc.techadhocutils.features.utils
 
 import android.content.Context
 import android.net.ConnectivityManager
+import com.techadhoc.techadhocutils.features.MyAppUtils
 
 object NetworkUtil {
     private val TYPE_WIFI = 1
     private val TYPE_MOBILE = 2
     private val TYPE_NOT_CONNECTED = 0
-     fun getConnectivityStatus(context: Context): Int {
-        val cm = context
+    fun getConnectivityStatus(): Int {
+        val cm = MyAppUtils.getContext()
             .getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val activeNetwork = cm.activeNetworkInfo
         if (null != activeNetwork) {
@@ -18,8 +19,8 @@ object NetworkUtil {
         return TYPE_NOT_CONNECTED
     }
 
-    fun getConnectivityStatusString(context: Context): String? {
-        val conn = getConnectivityStatus(context)
+    fun getConnectivityStatusString(): String? {
+        val conn = getConnectivityStatus()
         var status: String? = null
         if (conn == TYPE_WIFI) {
             status = "Internet working fine"
@@ -33,7 +34,7 @@ object NetworkUtil {
 
     val isConnected: Boolean
         get() {
-            val conn = getConnectivityStatus(MyApp.getContext())
+            val conn = getConnectivityStatus()
             var status = false
             if (conn == TYPE_WIFI) {
                 status = true

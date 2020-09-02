@@ -1,14 +1,5 @@
 package com.techadhoc.techadhocutils.features.utils;
 
-import android.content.Context;
-import android.content.DialogInterface;
-import android.view.Gravity;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.LinearLayout;
-
-import androidx.appcompat.app.AlertDialog;
-
 
 public class AlertUtils {
 

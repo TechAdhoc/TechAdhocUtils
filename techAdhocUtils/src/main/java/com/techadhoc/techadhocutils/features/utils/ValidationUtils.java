@@ -2,7 +2,7 @@ package com.techadhoc.techadhocutils.features.utils;
 
 import android.provider.Settings;
 
-import java.math.BigInteger;
+import com.techadhoc.techadhocutils.features.MyAppUtils;
 
 public class ValidationUtils {
     private long userAdminNumber = 1234L;
@@ -24,7 +24,7 @@ public class ValidationUtils {
             return admin_id;
         } else {
             String android_id = Settings.Secure.getString(
-                    getContext().getContentResolver(),
+                    MyAppUtils.getContext().getContentResolver(),
                     Settings.Secure.ANDROID_ID);
             return android_id;
         }

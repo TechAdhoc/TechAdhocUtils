@@ -1,4 +1,4 @@
-package com.techadhoc.techadhocutils
+package com.techadhoc.techadhocutilssample
 
 import org.junit.Test
 
