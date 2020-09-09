@@ -1,8 +1,10 @@
-package com.techadhoc.techadhocutils.features.utils;
+package com.techadhoc.techadhocutils.features.utils.storage;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+
+import com.techadhoc.techadhocutils.features.utils.AESCrpto;
 
 /**
  * Created by Prabal on 11/24/2015.
@@ -62,6 +64,10 @@ public class MySharedPref {
             ex.printStackTrace();
             return null;
         }
+    }
+
+    public Boolean isExist(String key) {
+        return pref.contains(key);
     }
 
     public void deleteValue(String key) {
